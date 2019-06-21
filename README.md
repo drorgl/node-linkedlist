@@ -1,31 +1,309 @@
-# LinkedList [![build status](https://secure.travis-ci.org/kilianc/node-linkedlist.png?branch=master)](http://travis-ci.org/kilianc/node-linkedlist)
+# LinkedList
 
 LinkedList is a data structure which implements an array friendly interface
 
-# Class Methods
+Note: This is a fork of linkedlist package (originally by Kilian Ciuffolo) converted to typescript and sprinked with documentation
 
-```javascript
-LinkedList.prototype.push(data)
-LinkedList.prototype.pop()
-LinkedList.prototype.unshift(data)
-LinkedList.prototype.shift()
-LinkedList.prototype.next()
-LinkedList.prototype.get(index)
-LinkedList.prototype.at(index)
-LinkedList.prototype.set(index, data)
-LinkedList.prototype.unshiftCurrent()
-LinkedList.prototype.removeCurrent()
-LinkedList.prototype.resetCursor()
-```
+# Class: LinkedList <**T**>
 
-# Class Getters
+Linked List Data Structure
+with Array Friendly Interface
 
-```javascript
-LinkedList.prototype.length
-LinkedList.prototype.head
-LinkedList.prototype.tail
-LinkedList.prototype.current
-```
+**`export`** 
+
+**`class`** LinkedList
+
+**`template`** T type of items to store in the list
+
+## Type parameters
+
+■` T`
+
+## Hierarchy
+
+* **LinkedList**
+
+### Index
+
+#### Properties
+
+* [at](_linkedlist_.linkedlist.md#at)
+
+#### Accessors
+
+* [current](_linkedlist_.linkedlist.md#current)
+* [head](_linkedlist_.linkedlist.md#head)
+* [length](_linkedlist_.linkedlist.md#length)
+* [tail](_linkedlist_.linkedlist.md#tail)
+
+#### Methods
+
+* [get](_linkedlist_.linkedlist.md#get)
+* [next](_linkedlist_.linkedlist.md#next)
+* [pop](_linkedlist_.linkedlist.md#pop)
+* [push](_linkedlist_.linkedlist.md#push)
+* [removeCurrent](_linkedlist_.linkedlist.md#removecurrent)
+* [resetCursor](_linkedlist_.linkedlist.md#resetcursor)
+* [set](_linkedlist_.linkedlist.md#set)
+* [shift](_linkedlist_.linkedlist.md#shift)
+* [unshift](_linkedlist_.linkedlist.md#unshift)
+* [unshiftCurrent](_linkedlist_.linkedlist.md#unshiftcurrent)
+
+## Properties
+
+###  at
+
+● **at**: *[get](_linkedlist_.linkedlist.md#get)* =  this.get
+
+Defined in LinkedList.ts:63
+
+see get
+
+**`memberof`** LinkedList
+
+___
+
+## Accessors
+
+###  current
+
+● **get current**(): *`T`*
+
+Defined in LinkedList.ts:43
+
+Get Current Value in List
+Modified by push, pop, shift, unshiftCurrent, remove, next and resetCursor
+
+**`readonly`** 
+
+**`type`** {T}
+
+**`memberof`** LinkedList
+
+**Returns:** *`T`*
+
+___
+
+###  head
+
+● **get head**(): *`T`*
+
+Defined in LinkedList.ts:20
+
+Get First Value in List
+
+**`readonly`** 
+
+**`type`** {T} type of values in the list
+
+**`memberof`** LinkedList
+
+**Returns:** *`T`*
+
+___
+
+###  length
+
+● **get length**(): *number*
+
+Defined in LinkedList.ts:54
+
+Get Number of elements in List
+
+**`readonly`** 
+
+**`type`** {number}
+
+**`memberof`** LinkedList
+
+**Returns:** *number*
+
+___
+
+###  tail
+
+● **get tail**(): *`T`*
+
+Defined in LinkedList.ts:31
+
+Get Last Value in List
+
+**`readonly`** 
+
+**`type`** {T}
+
+**`memberof`** LinkedList
+
+**Returns:** *`T`*
+
+___
+
+## Methods
+
+###  get
+
+▸ **get**(`index`: number): *`T`*
+
+Defined in LinkedList.ts:80
+
+Retrieve the value at index location
+
+**`memberof`** LinkedList
+
+**Parameters:**
+
+Name | Type | Description |
+------ | ------ | ------ |
+`index` | number | location in the list |
+
+**Returns:** *`T`*
+
+___
+
+###  next
+
+▸ **next**(): *`T`*
+
+Defined in LinkedList.ts:250
+
+Retrieve the next element value and advance current pointer
+
+**`memberof`** LinkedList
+
+**Returns:** *`T`*
+
+___
+
+###  pop
+
+▸ **pop**(): *`T`*
+
+Defined in LinkedList.ts:120
+
+Pop a value from the end
+
+**`memberof`** LinkedList
+
+**Returns:** *`T`*
+
+___
+
+###  push
+
+▸ **push**(`data`: `T`): *void*
+
+Defined in LinkedList.ts:104
+
+Push a value at the end
+
+**`memberof`** LinkedList
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`data` | `T` |
+
+**Returns:** *void*
+
+___
+
+###  removeCurrent
+
+▸ **removeCurrent**(): *`T`*
+
+Defined in LinkedList.ts:217
+
+Remove current element
+
+**`memberof`** LinkedList
+
+**Returns:** *`T`*
+
+___
+
+###  resetCursor
+
+▸ **resetCursor**(): *[LinkedList](_linkedlist_.linkedlist.md)‹*`T`*›*
+
+Defined in LinkedList.ts:266
+
+Resets the cursor
+
+**`memberof`** LinkedList
+
+**Returns:** *[LinkedList](_linkedlist_.linkedlist.md)‹*`T`*›*
+
+___
+
+###  set
+
+▸ **set**(`index`: number, `value`: `T`): *`T`*
+
+Defined in LinkedList.ts:279
+
+Set the value of a certain position in the list
+
+**`memberof`** LinkedList
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`index` | number |
+`value` | `T` |
+
+**Returns:** *`T`*
+
+___
+
+###  shift
+
+▸ **shift**(): *`T`*
+
+Defined in LinkedList.ts:145
+
+Removes the first element from the list and return the value
+
+**`memberof`** LinkedList
+
+**Returns:** *`T`*
+
+___
+
+###  unshift
+
+▸ **unshift**(`data`: `T`): *number*
+
+Defined in LinkedList.ts:171
+
+Add an element to the start of the list and return the new length of the list
+
+**`memberof`** LinkedList
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`data` | `T` |
+
+**Returns:** *number*
+
+___
+
+###  unshiftCurrent
+
+▸ **unshiftCurrent**(): *`T`*
+
+Defined in LinkedList.ts:187
+
+Moves the current element to the start of the list
+
+**`memberof`** LinkedList
+
+**Returns:** *`T`*
+
+___
 
 # Example
 
@@ -79,14 +357,6 @@ while (list.next()) {
 ```
 
 Look at the test suite for more example
-
-# How to contribute
-
-This repository follows (more or less) the [Felix's Node.js Style Guide](http://nodeguide.com/style.html), your contribution must be consistent with this style.
-
-The test suite is written on top of [visionmedia/mocha](http://visionmedia.github.com/mocha/) and it took hours of hard work. Please use the tests to check if your contribution is breaking some part of the library and add new tests for each new feature.
-
-    ⚡ npm test
 
 ## License
 

@@ -6,7 +6,7 @@ import { Item } from "./Item";
  *
  * @export
  * @class LinkedList
- * @template T
+ * @template T type of items to store in the list
  */
 export class LinkedList<T> {
 

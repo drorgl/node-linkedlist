@@ -11,3 +11,5 @@
 /.nyc_output
 /*.tgz
 /.vscode
+/.jsdoc.conf.json
+/docs

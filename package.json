@@ -28,7 +28,8 @@
     "lint": "tslint --project .",
     "dryrun": "tsc -noEmit",
     "build": "tsc",
-    "prepublish": "rimraf ./dist/ && npm run lint && npm run dryrun && npm run test && npm run build"
+    "doc": "typedoc --theme markdown",
+    "prepublish": "rimraf ./dist/ && rimraf ./docs && npm run lint && npm run dryrun && npm run test && npm run build"
   },
   "engines": {
     "node": ">= v0.6.x"
@@ -46,6 +47,8 @@
     "source-map-support": "^0.5.12",
     "ts-node": "^8.3.0",
     "tslint": "^5.17.0",
+    "typedoc": "^0.14.2",
+    "typedoc-plugin-markdown": "^2.0.5",
     "typescript": "^3.5.2"
   }
 }

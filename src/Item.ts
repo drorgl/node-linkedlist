@@ -1,3 +1,17 @@
+/**
+ * @ignore
+ * @hidden
+ * @internal
+ * to prevent typedoc from documenting internal structure
+ */
+
+/**
+ * Internal Item Structure
+ *
+ * @export
+ * @class Item
+ * @template T
+ */
 export class Item<T> {
 	public next: Item<T>;
 	public prev: Item<T>;
