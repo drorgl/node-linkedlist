@@ -1,6 +1,6 @@
 {
   "author": "Kilian Ciuffolo <me@nailik.org> (http://nailik.org)",
-  "name": "linkedlist",
+  "name": "@drorgl/linkedlist",
   "description": "Array like linked list with iterator",
   "keywords": [
     "array",
