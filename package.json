@@ -29,7 +29,8 @@
     "dryrun": "tsc -noEmit",
     "build": "tsc",
     "doc": "typedoc --theme markdown",
-    "prepublish": "rimraf ./dist/ && rimraf ./docs && npm run lint && npm run dryrun && npm run test && npm run build"
+    "prepublish": "rimraf ./dist/ && rimraf ./docs && npm run lint && npm run dryrun && npm run test && npm run build",
+    "publish-now": "npm publish --access public"
   },
   "engines": {
     "node": ">= v0.6.x"
