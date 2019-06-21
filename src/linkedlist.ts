@@ -294,4 +294,38 @@ export class LinkedList<T> {
 
 		throw new Error('Index "' + index + '" out of bounds');
 	}
+
+	/**
+	 * return all elements as an array
+	 *
+	 * @returns
+	 * @memberof LinkedList
+	 */
+	public toArray() {
+		let next = this._head;
+
+		const arr: T[] = [];
+
+		while (next) {
+			arr.push(next.data);
+			next = next.next;
+		}
+
+		return arr;
+	}
+
+	/**
+	 * Iterate over each element in linked list
+	 *
+	 * @param {(value: T) => void} callback
+	 * @memberof LinkedList
+	 */
+	public forEach(callback: (value: T) => void) {
+		let next = this._head;
+
+		while (next) {
+			callback(next.data);
+			next = next.next;
+		}
+	}
 }

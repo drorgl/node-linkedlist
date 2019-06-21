@@ -347,6 +347,51 @@ describe("LinkedList", () => {
 		});
 	});
 
+	describe("#toArray()", () => {
+		describe("empty list", () => {
+			before(() => {
+				list = new LinkedList();
+			});
+			it("should return an empty array", () => {
+				expect(list.toArray()).to.deep.eq([]);
+			});
+		});
+
+		describe("toArray iteration", () => {
+			before(() => {
+				list = new LinkedList<number>();
+				for (let i = 0; i < 10; i++) {
+					list.push(i);
+				}
+			});
+			it("should iterate correctly", () => {
+				const arr = list.toArray();
+				for (let i = 0; i < 10; i++) {
+					expect(arr[i]).to.eq(i);
+				}
+				expect(arr.length).to.eq(10);
+			});
+		});
+	});
+
+	describe("#forEach()", () => {
+		describe("should iterate correctly", () => {
+			before(() => {
+				list = new LinkedList<number>();
+				for (let i = 0; i < 10; i++) {
+					list.push(i);
+				}
+			});
+			it("should iterate correctly", () => {
+				let i = 0;
+				list.forEach((value) => {
+					expect(value).to.eq(i++);
+				});
+				expect(i).to.eq(10);
+			});
+		});
+	});
+
 	describe("#resetCursor()", () => {
 		before(() => {
 			list = new LinkedList();
