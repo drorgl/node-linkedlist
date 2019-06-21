@@ -392,6 +392,24 @@ describe("LinkedList", () => {
 		});
 	});
 
+	describe("#reverseForEach()", () => {
+		describe("should iterate correctly", () => {
+			before(() => {
+				list = new LinkedList<number>();
+				for (let i = 0; i < 10; i++) {
+					list.push(i);
+				}
+			});
+			it("should iterate correctly", () => {
+				let i = 10;
+				list.reverseForEach((value) => {
+					expect(value).to.eq(--i);
+				});
+				expect(i).to.eq(0);
+			});
+		});
+	});
+
 	describe("#resetCursor()", () => {
 		before(() => {
 			list = new LinkedList();

@@ -328,4 +328,19 @@ export class LinkedList<T> {
 			next = next.next;
 		}
 	}
+
+	/**
+	 * Iterate reversely over each element in linked list
+	 *
+	 * @param {(value: T) => void} callback
+	 * @memberof LinkedList
+	 */
+	public reverseForEach(callback: (value: T) => void) {
+		let prev = this._tail;
+
+		while (prev) {
+			callback(prev.data);
+			prev = prev.prev;
+		}
+	}
 }
